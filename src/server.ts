@@ -11,7 +11,7 @@ import * as debug from 'debug';
 
 // -- SOCKET-IMPORTS --
 
-import {Environment} from "./env.conf";
+import {Environment} from "./config/env.conf";
 // setup appropriate environment variables for this app
 new Environment();
 
