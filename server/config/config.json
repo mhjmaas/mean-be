@@ -1,0 +1,24 @@
+{
+  "ENV" : "local",
+
+  "SERVER_PORT" : 3000,
+
+  "JWT_SECRET" : "355FC4AE9AKW39DGCD1B8E93C",
+
+  "COOKIE_SECRET" : "355FC4AE9AKW39DGCD1B8E93C",
+
+  "MONGO_URI" : {
+
+    "LOCAL" : "mongodb://localhost:27017/database-dev",
+
+    "DEVELOPMENT" : "mongodb://mongo:27017/database-dev",
+
+    "PRODUCTION" : "mongodb://dbuser:dbpassword@mongodb:27017/sampledb",
+
+    "TEST" : "mongodb://mongo:27017/database-tst"
+  },
+
+  "SESSION_SECRET" : "355FC4AE9344234B8E4FED1B8E93C"
+
+}
+
