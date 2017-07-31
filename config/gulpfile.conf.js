@@ -12,12 +12,12 @@ var tsProject = typescript.createProject('tsconfig.json',{
 });
 
 gulp.task('backendSrc', function(){
-  var tsResult = gulp.src(['server/**/*.ts', 'server/**/**/*.ts']).pipe(tsProject());
-  return tsResult.js.pipe(gulp.dest('./dist/server'))
+  var tsResult = gulp.src(['src/**/*.ts', 'src/**/**/*.ts']).pipe(tsProject());
+  return tsResult.js.pipe(gulp.dest('./dist'))
 });
 
 gulp.task('serverAssets', function() {
-  return gulp.src('./server/**/*.json','./server/**/**/*.json').pipe(gulp.dest('./dist/server'));
+  return gulp.src('./src/**/*.json','./src/**/**/*.json').pipe(gulp.dest('./dist'));
 });
 
 // --- ADDITIONAL-TASKS ---
@@ -26,7 +26,7 @@ gulp.task('serverAssets', function() {
 gulp.task('watch', function(){
   nodemon({
     // the script to run the app
-    script: './dist/server/server.js',
+    script: './dist/server.js',
     tasks: ['backendSrc'],
     ext: 'ts json',
     ignore: ['assets/','dist/', 'src/app/']

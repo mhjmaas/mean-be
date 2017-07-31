@@ -4,7 +4,7 @@
  * This file sets variables in the project based on our environment variables
  */
 
-var config = require('./config.json');
+var config = require('./config/config.json');
 import Env = jasmine.Env;
 
 // Check each necessary node `environment variable` to see if a
